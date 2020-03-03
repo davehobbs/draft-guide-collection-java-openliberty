@@ -1,12 +1,12 @@
 ---
-permalink: /guides/collection-openliberty/
+permalink: /guides/collection-java-openliberty/
 layout: guide-markdown
 title: Developing cloud native microservice applications with the Open Liberty application stack
 duration: 40 minutes
 releasedate: 2020-01-27
 description: Explore how to use the Open Liberty application stack to create, run, update, deploy, and deliver cloud native microservices. 
-tags: ['Java', 'Open Liberty', 'Collection']
-guide-category: collections
+tags: ['Java', 'Open Liberty', 'Stack']
+guide-category: stacks
 ---
 
 <!-- Note:
@@ -16,7 +16,7 @@ guide-category: collections
 
 <!--
 //
-//	Copyright 2019, 2020 IBM Corporation and others.
+//	Copyright 2020 IBM Corporation and others.
 //
 //	Licensed under the Apache License, Version 2.0 (the "License");
 //	you may not use this file except in compliance with the License.
@@ -275,15 +275,13 @@ Container] [INFO] [AUDIT   ] CWWKT0017I: Web application removed (default_host):
 [Container] [INFO] [AUDIT   ] CWWKZ0003I: The application starter-app updated in 1.052 seconds.
 ```
 
-The resource that you just updated the `StarterResource.java` class in the `src/main/java/dev/appsody/starter` directory. Open the file, modify the response from the `getRequest` method:
-
 Point your browser to `http://localhost:9080/starter/resource` URL to see the new output:
 
 ```shell
 StarterResource response running in a microservice!
 ```
 
-**Note:** Modifying the response from the Starter resource endpoint will cause an integration test failure in the test that checks the endpoint response. To ensure the test passes, edit the `EndpointTest.java` class in the `src/test/java/it/dev/appsody/starter` directory. Modify the expected resource string in the `testResourceEndpoint` method to match the response from the `getRequest` method in the `StarterResource.java` class.
+**Note:** Modifying the response from the Starter resource endpoint will cause an integration test failure in the test that checks the endpoint response. To ensure that the test passes, edit the `EndpointTest.java` class in the `src/test/java/it/dev/appsody/starter` directory. Modify the expected resource string in the `testResourceEndpoint` method to match the response from the `getRequest` method in the `StarterResource.java` class.
 
 Use `Ctrl+C` to stop the development environment, or run the command `appsody stop` from another terminal.
 
